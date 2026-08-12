@@ -160,7 +160,6 @@ function setupTimelineToggle() {
     const entry = btn.closest(".entry");
     const expanded = entry.classList.toggle("expanded");
     btn.textContent = expanded ? "▴ LESS" : "▾ MORE";
-    playBlip(expanded ? 620 : 480, 0.06, "sine");
   });
 }
 
@@ -256,7 +255,6 @@ function setupCopyLink() {
     try {
       await navigator.clipboard.writeText(window.location.href);
       btn.textContent = "COPIED ✓";
-      playBlip(880, 0.08, "square");
     } catch (e) {
       btn.textContent = "COPY FAILED";
     }
@@ -324,45 +322,7 @@ function setupFilters() {
         void card.offsetWidth;
         card.classList.add("filter-flicker");
       });
-      playBlip(520, 0.07, "square");
     });
-  });
-}
-
-// ---------- Synthesized UI sound effects (muted by default) ----------
-let audioCtx = null;
-let soundEnabled = false;
-
-function getAudioCtx() {
-  if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-  return audioCtx;
-}
-
-function playBlip(freq, duration, type) {
-  if (!soundEnabled) return;
-  const ctx = getAudioCtx();
-  const osc = ctx.createOscillator();
-  const gain = ctx.createGain();
-  osc.type = type || "square";
-  osc.frequency.value = freq || 660;
-  gain.gain.setValueAtTime(0.06, ctx.currentTime);
-  gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + (duration || 0.08));
-  osc.connect(gain);
-  gain.connect(ctx.destination);
-  osc.start();
-  osc.stop(ctx.currentTime + (duration || 0.08));
-}
-
-function setupSoundToggle() {
-  const btn = document.getElementById("soundToggle");
-  if (!btn) return;
-  btn.addEventListener("click", () => {
-    soundEnabled = !soundEnabled;
-    btn.textContent = soundEnabled ? "🔊" : "🔇";
-    if (soundEnabled) {
-      getAudioCtx().resume?.();
-      playBlip(880, 0.1, "square");
-    }
   });
 }
 
@@ -441,7 +401,6 @@ function setupKonamiCode() {
       if (progress === sequence.length) {
         spawnConfetti();
         showCheatBanner();
-        [660, 880, 990, 1320].forEach((f, i) => setTimeout(() => playBlip(f, 0.12, "square"), i * 90));
         progress = 0;
       }
     } else {
@@ -460,7 +419,6 @@ setupScrollProgress();
 setupKonamiCode();
 setupLiveClock();
 setupPortraitTilt();
-setupSoundToggle();
 setupSkillLinks();
 setupGradCountdown();
 setupCopyLink();

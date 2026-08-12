@@ -214,24 +214,6 @@ img { max-width: 100%; display: block; }
   gap: 10px;
 }
 
-.sound-toggle {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.95rem;
-  background: linear-gradient(to bottom, #fdfefe, #cddae6 48%, #a9bccf 50%, #c4d3e2);
-  border: 1px solid #8ea3ba;
-  box-shadow: 0 2px 0 rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.8);
-  cursor: pointer;
-  transition: transform 0.12s ease;
-}
-
-.sound-toggle:hover { transform: translateY(-1px); }
-.sound-toggle:active { transform: translateY(1px); }
-
 .hud-tabs a {
   font-family: var(--label);
   font-weight: 700;
@@ -1382,7 +1364,7 @@ a.ach-badge:hover {
   /* Kill decorative/interactive-only chrome */
   .scanlines, .scroll-progress, .hud-bar, .hero-glow,
   .portrait-game, .portrait-scan, .portrait-noise, .confetti-container,
-  .cheat-banner, .sound-toggle, .filters, .entry-toggle, .blink-cursor,
+  .cheat-banner, .filters, .entry-toggle, .blink-cursor,
   .hud-clock, .visitor-counter, .hero-bg::after {
     display: none !important;
   }
