@@ -993,10 +993,20 @@ section { padding: 90px 6vw; }
 .ach-group:last-child { margin-bottom: 0; }
 
 .ach-group-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
   font-family: var(--hud);
   font-size: 0.95rem;
   color: var(--ocean-bright);
   margin-bottom: 18px;
+}
+
+.ach-group-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--ocean-bright);
 }
 
 .ach-grid {
@@ -1074,9 +1084,21 @@ a.ach-badge:hover {
 }
 
 .ach-icon {
-  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
   flex-shrink: 0;
-  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.25));
+  border-radius: 8px;
+  background: linear-gradient(160deg, var(--paper-2), #ffffff);
+  border: 1px solid #b9cbdd;
+  color: var(--panel-border);
+}
+
+.ach-icon svg {
+  width: 19px;
+  height: 19px;
 }
 
 .ach-badge div {
