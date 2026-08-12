@@ -181,22 +181,12 @@
       </div>
       <p class="origins-note">Moving between school systems, countries, and languages before high school is where the pattern-matching started: you learn fast to find the signal when nothing around you looks the same twice. The same restlessness showed up in the water early too, as a Chilean National Age Group swimming finalist long before any NCAA roster.</p>
 
-      <div class="places-map">
-        <div class="map-frame">
-          <img src="assets/world-map.svg" alt="" class="map-bg">
-          <span class="map-pin map-pin-lived" style="left:26.45%;top:66.27%" data-label="Santiago, Chile" tabindex="0"></span>
-          <span class="map-pin map-pin-lived" style="left:26.70%;top:61.33%" data-label="Antofagasta, Chile" tabindex="0"></span>
-          <span class="map-pin map-pin-lived" style="left:19.2%;top:32.1%" data-label="Tucson, Arizona" tabindex="0"></span>
-          <span class="map-pin map-pin-lived" style="left:16.1%;top:29.2%" data-label="Santa Clara, California" tabindex="0"></span>
-          <span class="map-pin map-pin-lived" style="left:25.68%;top:26.74%" data-label="New York, New York" tabindex="0"></span>
-          <span class="map-pin map-pin-visited" style="left:27.9%;top:25.8%" data-label="Canada" tabindex="0"></span>
-          <span class="map-pin map-pin-visited" style="left:18.44%;top:36.68%" data-label="Mexico" tabindex="0"></span>
-          <span class="map-pin map-pin-visited" style="left:29.77%;top:66.05%" data-label="Argentina" tabindex="0"></span>
-          <span class="map-pin map-pin-visited" style="left:25.41%;top:44.68%" data-label="Colombia" tabindex="0"></span>
-          <span class="map-pin map-pin-visited" style="left:33.99%;top:59.69%" data-label="Brazil" tabindex="0"></span>
-          <span class="map-pin map-pin-visited" style="left:24.58%;top:53.79%" data-label="Peru" tabindex="0"></span>
-          <span class="map-pin map-pin-visited" style="left:82.09%;top:30.84%" data-label="South Korea" tabindex="0"></span>
+      <div class="globe-wrap">
+        <div class="globe-frame" id="globeFrame">
+          <div class="globe-loading" id="globeLoading">LOADING GLOBE…</div>
+          <div class="globe-tooltip" id="globeTooltip"></div>
         </div>
+        <p class="globe-hint">◆ DRAG TO ROTATE ◆</p>
         <div class="map-legend">
           <span><i class="dot dot-lived"></i>Lived</span>
           <span><i class="dot dot-visited"></i>Visited</span>
@@ -382,6 +372,8 @@
   <p class="visitor-counter">VISITORS: <span id="visitorCounter">000000</span></p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
 <script src="script.js"></script>
+<script src="globe.js"></script>
 </body>
 </html>
