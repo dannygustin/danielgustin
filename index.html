@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel Gustin</title>
+<meta name="description" content="Daniel Gustin: analytics, athletics, and a life built across borders.">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Daniel Gustin — Player Profile">
+<meta property="og:description" content="Analytics, athletics, and a life built across borders. NCAA Division I swimmer, data analyst, NYU '26.">
+<meta property="og:image" content="assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Daniel Gustin — Player Profile">
+<meta name="twitter:description" content="Analytics, athletics, and a life built across borders. NCAA Division I swimmer, data analyst, NYU '26.">
+<meta name="twitter:image" content="assets/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Rajdhani:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scanlines"></div>
+
+<div class="scroll-progress"><div class="scroll-progress-fill" id="scrollProgressFill"></div></div>
+<div class="confetti-container" id="confettiContainer"></div>
+
+<header class="hud-bar">
+  <div class="hud-bar-left">
+    <a href="#top" class="hud-crest">DG</a>
+    <div class="hud-clock" id="hudClock">--:--:-- NYC</div>
+  </div>
+  <nav class="hud-tabs">
+    <a href="#journey">Mission Log</a>
+    <a href="#about">Player Stats</a>
+    <a href="#achievements">Trophies</a>
+    <a href="#quests">Side Quests</a>
+    <a href="#connect" class="hud-tab-cta">Continue ▶</a>
+    <button class="sound-toggle" id="soundToggle" type="button" aria-label="Toggle sound effects">🔇</button>
+  </nav>
+</header>
+
+<header class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-ticker">
+    <div class="ticker-track">
+      <span class="ticker-item">PRESS <span class="ticker-hl">START</span> TO LOAD PROFILE &nbsp;·&nbsp; SANTIAGO &nbsp;·&nbsp; ANTOFAGASTA &nbsp;·&nbsp; TUCSON &nbsp;·&nbsp; SANTA CLARA &nbsp;·&nbsp; NEW YORK &nbsp;·&nbsp;</span>
+      <span class="ticker-item" aria-hidden="true">PRESS <span class="ticker-hl">START</span> TO LOAD PROFILE &nbsp;·&nbsp; SANTIAGO &nbsp;·&nbsp; ANTOFAGASTA &nbsp;·&nbsp; TUCSON &nbsp;·&nbsp; SANTA CLARA &nbsp;·&nbsp; NEW YORK &nbsp;·&nbsp;</span>
+    </div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-top">
+      <div class="hero-title-block">
+        <p class="hero-kicker">PLAYER PROFILE · EST. 2003</p>
+        <h1 class="hud-title">DANIEL<br>GUSTIN</h1>
+      </div>
+      <div class="portrait-tilt">
+        <div class="portrait-tilt-inner" id="portraitTiltInner">
+          <div class="player-portrait">
+            <img class="portrait-layer portrait-normal" src="assets/headshot.jpg" alt="Daniel Gustin">
+            <img class="portrait-layer portrait-game" src="assets/avatar-game.jpg" alt="Daniel Gustin, game avatar" aria-hidden="true">
+            <span class="portrait-scan"></span>
+            <span class="portrait-noise"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="hero-sub">I turn scattered signals into decisions: in data, and everywhere else I've had to figure things out from scratch.</p>
+    <p class="hero-desc">Raised between Chile and the U.S., trained as an economist and analyst, and racing as an NCAA Division I swimmer while finishing a master's at NYU. I've spent the last few years translating messy, unstructured problems (attrition, revenue, program performance) into decisions that stakeholders actually act on.</p>
+    <div class="hero-actions">
+      <a href="#journey" class="btn btn-primary">START MISSION LOG</a>
+      <a href="#connect" class="btn btn-ghost">CONTINUE ▶</a>
+    </div>
+  </div>
+
+  <div class="logo-strip hero-logo-strip">
+    <div class="logo-plate reveal">
+      <img src="assets/logos/pwc.svg" alt="PwC">
+      <span class="logo-caption">Consulting Intern</span>
+    </div>
+    <div class="logo-plate reveal">
+      <img src="assets/logos/everpure.svg" alt="Everpure, formerly Pure Storage">
+      <span class="logo-caption">Data Analytics Intern</span>
+    </div>
+    <div class="logo-plate reveal">
+      <img src="assets/logos/az-oeo.png" alt="Arizona Office of Economic Opportunity">
+      <span class="logo-caption">Research Analyst</span>
+    </div>
+    <div class="logo-plate reveal">
+      <img src="assets/logos/amazon.svg" alt="Amazon">
+      <span class="logo-caption">Ops &amp; People Analytics</span>
+    </div>
+    <div class="logo-plate reveal">
+      <img src="assets/logos/scu.png" alt="Santa Clara University">
+      <span class="logo-caption">B.S. Economics</span>
+    </div>
+    <div class="logo-plate reveal">
+      <img src="assets/logos/nyu.svg" alt="New York University">
+      <span class="logo-caption">M.S. Management &amp; Analytics</span>
+    </div>
+  </div>
+</header>
+
+<section class="origins" id="origins">
+  <div class="window">
+    <div class="window-titlebar">
+      <span>◆ BEFORE THE RESUME · CHARACTER BACKSTORY</span>
+    </div>
+    <div class="window-body origins-body">
+      <div class="origins-track">
+        <div class="origin-card">
+          <span class="origin-tag">LEVEL 1 · Santiago, Chile</span>
+          <p>Born in Santiago. Home base, and where the story starts.</p>
+        </div>
+        <div class="origin-arrow">▶</div>
+        <div class="origin-card">
+          <span class="origin-tag">LEVEL 2 · Antofagasta, Chile</span>
+          <p>Early childhood in Antofagasta, on Chile's north coast, before the family's first move abroad.</p>
+        </div>
+        <div class="origin-arrow">▶</div>
+        <div class="origin-card">
+          <span class="origin-tag">LEVEL 3 · Tucson, Arizona, USA</span>
+          <p>Moved to Tucson for kindergarten, three years learning a new language, a new school system, a new country.</p>
+        </div>
+        <div class="origin-arrow">▶</div>
+        <div class="origin-card">
+          <span class="origin-tag">LEVEL 4 · Santiago, Chile</span>
+          <p>Moved back and enrolled in an international school, finishing with dual credentials: a high school diploma and the full IB Programme. Design Technology Departmental Award, 2020-21.</p>
+        </div>
+        <div class="origin-arrow">▶</div>
+        <div class="origin-card origin-card-accent">
+          <span class="origin-tag">LEVEL 5 · Santa Clara, USA</span>
+          <p>Left for California at 18 to study economics and data, where the dated mission log below picks up.</p>
+        </div>
+      </div>
+      <p class="origins-note">Moving between school systems, countries, and languages before high school is where the pattern-matching started: you learn fast to find the signal when nothing around you looks the same twice. The same restlessness showed up in the water early too, as a Chilean National Age Group swimming finalist long before any NCAA roster.</p>
+
+      <div class="places-map">
+        <div class="map-frame">
+          <img src="assets/world-map.svg" alt="" class="map-bg">
+          <span class="map-pin map-pin-lived" style="left:30.4%;top:68.6%" data-label="Santiago, Chile" tabindex="0"></span>
+          <span class="map-pin map-pin-lived" style="left:30.4%;top:63.1%" data-label="Antofagasta, Chile" tabindex="0"></span>
+          <span class="map-pin map-pin-lived" style="left:19.2%;top:32.1%" data-label="Tucson, Arizona" tabindex="0"></span>
+          <span class="map-pin map-pin-lived" style="left:16.1%;top:29.2%" data-label="Santa Clara, California" tabindex="0"></span>
+          <span class="map-pin map-pin-lived" style="left:29.4%;top:27.4%" data-label="New York, New York" tabindex="0"></span>
+          <span class="map-pin map-pin-visited" style="left:27.9%;top:25.8%" data-label="Canada" tabindex="0"></span>
+          <span class="map-pin map-pin-visited" style="left:22.5%;top:39.2%" data-label="Mexico" tabindex="0"></span>
+          <span class="map-pin map-pin-visited" style="left:33.8%;top:69.2%" data-label="Argentina" tabindex="0"></span>
+          <span class="map-pin map-pin-visited" style="left:29.4%;top:47.4%" data-label="Colombia" tabindex="0"></span>
+          <span class="map-pin map-pin-visited" style="left:38.0%;top:62.7%" data-label="Brazil" tabindex="0"></span>
+          <span class="map-pin map-pin-visited" style="left:28.6%;top:56.7%" data-label="Peru" tabindex="0"></span>
+          <span class="map-pin map-pin-visited" style="left:85.3%;top:29.1%" data-label="South Korea" tabindex="0"></span>
+        </div>
+        <div class="map-legend">
+          <span><i class="dot dot-lived"></i>Lived</span>
+          <span><i class="dot dot-visited"></i>Visited</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="journey" id="journey">
+  <div class="section-head">
+    <p class="section-kicker">2021–2026</p>
+    <h2 class="hud-title-sm">MISSION LOG</h2>
+    <p class="section-sub">Every internship, degree, and milestone since college. Select a loadout to filter.</p>
+  </div>
+
+  <div class="filters">
+    <button class="filter-pill active" data-filter="all">ALL</button>
+    <button class="filter-pill" data-filter="education">EDUCATION</button>
+    <button class="filter-pill" data-filter="experience">EXPERIENCE</button>
+    <button class="filter-pill" data-filter="athletics">ATHLETICS</button>
+    <button class="filter-pill" data-filter="milestone">MILESTONE</button>
+  </div>
+
+  <div class="timeline" id="timeline">
+    <!-- Timeline entries injected by script.js -->
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="window">
+    <div class="window-titlebar">
+      <span>◆ PLAYER STATS · SKILL TREE</span>
+    </div>
+    <div class="window-body">
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>Five internships across a Big Four consultancy, Everpure, a state government, and Amazon have all pointed at the same skill: taking unstructured, messy inputs (sentiment data, field notes, job postings, cost records) and turning them into a roadmap someone with a budget can actually use.</p>
+          <p>Training 20+ hours a week as an NCAA Division I swimmer alongside a master's degree isn't a side note. It's the same muscle. Show up daily, measure what matters, adjust, repeat. It's why I default to structure under pressure rather than away from it.</p>
+        </div>
+        <div class="about-skills">
+          <div class="skill-group reveal">
+            <h3>▸ Technical &amp; Tools</h3>
+            <div class="tags">
+              <span>Python</span><span>R</span><span>SQL</span><span>Tableau</span><span>Looker</span><span>BigQuery</span><span>GCP</span><span>Salesforce</span><span>SPSS</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h3>▸ Analytics &amp; Data</h3>
+            <div class="tags">
+              <span>Predictive Modeling</span><span>Time Series Analysis</span><span>KPI Development</span><span>Business Intelligence</span><span>Data Wrangling</span><span>Cohort Segmentation</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h3>▸ Business &amp; Operations</h3>
+            <div class="tags">
+              <span>Product Management</span><span>Stakeholder Reporting</span><span>Agile &amp; Waterfall</span><span>Jira</span><span>Asana</span><span>RACI Matrices</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h3>▸ AI &amp; Automation</h3>
+            <div class="tags">
+              <span>Codex</span><span>MCP Servers</span><span>Docker</span><span>Virtual Machines</span><span>Git &amp; PR Workflows</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="achievements" id="achievements">
+  <div class="window">
+    <div class="window-titlebar">
+      <span>◆ ACHIEVEMENTS UNLOCKED · TROPHY CASE</span>
+      <span class="badge-counter" data-badge-counter="#achievements">0 / 0</span>
+    </div>
+    <div class="window-body">
+      <div class="ach-group">
+        <h3 class="ach-group-title">🏊 Athletics</h3>
+        <div class="ach-grid">
+          <div class="ach-badge reveal">
+            <span class="ach-icon">🥇</span>
+            <div><span class="ach-title">2025 CCS Nationals Finalist</span><span class="ach-sub">Swimming</span></div>
+          </div>
+          <div class="ach-badge reveal">
+            <span class="ach-icon">🥈</span>
+            <div><span class="ach-title">2024 CCS Regionals Medalist</span><span class="ach-sub">Swimming</span></div>
+          </div>
+          <div class="ach-badge reveal">
+            <span class="ach-icon">🏆</span>
+            <div><span class="ach-title">Swim MVP, Santa Clara</span><span class="ach-sub">2023-24 &amp; 2024-25</span></div>
+          </div>
+          <div class="ach-badge reveal">
+            <span class="ach-icon">⭐</span>
+            <div><span class="ach-title">Club Sports Athlete of the Year</span><span class="ach-sub">Santa Clara, 2024-25</span></div>
+          </div>
+          <a class="ach-badge reveal" href="https://gonyuathletics.com/sports/mens-swimming-diving/roster/daniel-gustin/15712" target="_blank" rel="noopener">
+            <span class="ach-icon">🎽</span>
+            <div><span class="ach-title">NCAA Varsity Swimmer</span><span class="ach-sub">New York University · Roster ↗</span></div>
+          </a>
+          <div class="ach-badge reveal">
+            <span class="ach-icon">🌊</span>
+            <div><span class="ach-title">National Age Group Finalist</span><span class="ach-sub">Chilean Swimming</span></div>
+          </div>
+          <a class="ach-badge reveal" href="https://swimswam.com/college-club-swimming-finalist-daniel-gustin-joining-nyu-for-graduate-school/" target="_blank" rel="noopener">
+            <span class="ach-icon">📰</span>
+            <div><span class="ach-title">Featured in SwimSwam</span><span class="ach-sub">NYU Commitment Announcement ↗</span></div>
+          </a>
+        </div>
+      </div>
+      <div class="ach-group">
+        <h3 class="ach-group-title">🎓 Academic &amp; Leadership</h3>
+        <div class="ach-grid">
+          <div class="ach-badge reveal">
+            <span class="ach-icon">🏅</span>
+            <div><span class="ach-title">Distinguished Scholars Award</span><span class="ach-sub">New York University</span></div>
+          </div>
+          <div class="ach-badge reveal">
+            <span class="ach-icon">💡</span>
+            <div><span class="ach-title">Innovation Fellow</span><span class="ach-sub">Santa Clara University</span></div>
+          </div>
+          <div class="ach-badge reveal">
+            <span class="ach-icon">🎖️</span>
+            <div><span class="ach-title">Bronco Scholarship Recipient</span><span class="ach-sub">4 years, Santa Clara</span></div>
+          </div>
+          <div class="ach-badge reveal">
+            <span class="ach-icon">👑</span>
+            <div><span class="ach-title">Swim Club President</span><span class="ach-sub">Santa Clara, 2024-25</span></div>
+          </div>
+          <div class="ach-badge reveal">
+            <span class="ach-icon">📘</span>
+            <div><span class="ach-title">IB Diploma Recipient</span><span class="ach-sub">International Baccalaureate</span></div>
+          </div>
+          <div class="ach-badge reveal">
+            <span class="ach-icon">✏️</span>
+            <div><span class="ach-title">Design Technology Award</span><span class="ach-sub">Departmental, 2020-21</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quests" id="quests">
+  <div class="window">
+    <div class="window-titlebar">
+      <span>◆ SIDE QUESTS · OFF THE MAIN PATH</span>
+      <span class="badge-counter" data-badge-counter="#quests">0 / 0</span>
+    </div>
+    <div class="window-body">
+      <div class="ach-group">
+        <h3 class="ach-group-title">🛠️ Built &amp; Made</h3>
+        <div class="ach-grid">
+          <div class="ach-badge reveal">
+            <span class="ach-icon">🦾</span>
+            <div><span class="ach-title">3D-Printed Prosthetic</span><span class="ach-sub">Designed in high school for a professor's son, born without a hand</span></div>
+          </div>
+          <div class="ach-badge reveal">
+            <span class="ach-icon">🖨️</span>
+            <div><span class="ach-title">CAD &amp; 3D Printing</span><span class="ach-sub">SolidWorks &amp; Rhino, designing and printing at home</span></div>
+          </div>
+          <div class="ach-badge reveal">
+            <span class="ach-icon">🏺</span>
+            <div><span class="ach-title">Ceramics</span><span class="ach-sub">Handbuilt and wheel-thrown pieces</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ach-group">
+        <h3 class="ach-group-title">🌊 Off the Clock</h3>
+        <div class="ach-grid">
+          <div class="ach-badge reveal">
+            <span class="ach-icon">🏄</span>
+            <div><span class="ach-title">Surfing</span><span class="ach-sub">5'10" shortboard &amp; 7'6" funboard, up and down the Bay Area</span></div>
+          </div>
+          <div class="ach-badge reveal">
+            <span class="ach-icon">🌉</span>
+            <div><span class="ach-title">Alcatraz to SF Swim, x2</span><span class="ach-sub">Summer 2024 &amp; August 2026</span></div>
+          </div>
+          <div class="ach-badge reveal">
+            <span class="ach-icon">🏃</span>
+            <div><span class="ach-title">Half Marathon, on a Whim</span><span class="ach-sub">13.1 miles, no training, just before Christmas 2025</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ach-group">
+        <h3 class="ach-group-title">🔓 Currently Loading</h3>
+        <div class="ach-grid">
+          <div class="ach-badge ach-badge-locked reveal">
+            <span class="ach-icon">🤖</span>
+            <div><span class="ach-title">AI Fluency</span><span class="ach-sub">Codex, MCPs, Docker &amp; VMs, on the job right now</span><span class="ach-status">IN PROGRESS</span></div>
+          </div>
+          <div class="ach-badge ach-badge-locked reveal">
+            <span class="ach-icon">🍽️</span>
+            <div><span class="ach-title">Open a Restaurant</span><span class="ach-sub">The long-term dream</span><span class="ach-status">LOCKED</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="connect" id="connect">
+  <div class="connect-inner">
+    <p class="hero-kicker">GAME PAUSED<span class="blink-cursor">_</span></p>
+    <h2 class="hud-title-sm">CONTINUE THE STORY?</h2>
+    <p class="connect-sub">Open to full-time roles starting December 2026, and always up for a conversation about analytics, athletics, or growing up in two languages.</p>
+
+    <div class="score-cap countdown-badge">
+      <span class="score-num" id="gradCountdown">--</span>
+      <span class="score-label">Days to Level Up · Dec 2026</span>
+    </div>
+
+    <div class="connect-links">
+      <a href="mailto:dmg9836@nyu.edu" class="btn btn-primary">EMAIL ME</a>
+      <a href="https://www.linkedin.com/in/daniel-gustin/" target="_blank" rel="noopener" class="btn btn-ghost">LINKEDIN</a>
+      <a href="assets/Daniel_Gustin_Resume.pdf" download class="btn btn-ghost">DOWNLOAD RESUME ▾</a>
+      <button class="btn btn-ghost" id="copyLinkBtn" type="button">COPY LINK</button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>PLAYER: DANIEL GUSTIN &middot; NEW YORK, NY &middot; © 2026</p>
+  <p class="visitor-counter">VISITORS: <span id="visitorCounter">000000</span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
