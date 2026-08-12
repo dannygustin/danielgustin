@@ -76,6 +76,15 @@
     });
     group.add(new THREE.Mesh(solidGeo, solidMat));
 
+    // Continent landmask (cyan-tinted, matches theme rather than a photo-real earth)
+    const landTex = new THREE.TextureLoader().load(
+      "assets/globe-landmask.png",
+      () => { if (renderer) renderer.render(scene, camera); }
+    );
+    const landGeo = new THREE.SphereGeometry(RADIUS * 0.998, 64, 40);
+    const landMat = new THREE.MeshBasicMaterial({ map: landTex, transparent: true, opacity: 0.8 });
+    group.add(new THREE.Mesh(landGeo, landMat));
+
     // Lat/long wireframe grid
     const lineMat = new THREE.LineBasicMaterial({ color: COLOR_WIRE, transparent: true, opacity: 0.35 });
     const lineMatEquator = new THREE.LineBasicMaterial({ color: COLOR_WIRE, transparent: true, opacity: 0.65 });
@@ -254,7 +263,6 @@
   }
 
   function tick() {
-    if (document.hidden) return;
     if (autoRotate && !reduceMotion) {
       globeGroup.rotation.y += 0.0018;
     } else if (!dragging && (Math.abs(velX) > 0.0001 || Math.abs(velY) > 0.0001)) {
@@ -270,7 +278,6 @@
   // setInterval rather than requestAnimationFrame: rAF is throttled to
   // near-zero in backgrounded/inactive tabs (and doesn't fire at all in some
   // automated/embedded contexts), which would freeze the globe entirely.
-  // The document.hidden check above keeps this battery-friendly regardless.
   function animate() {
     setInterval(tick, 16);
   }
