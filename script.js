@@ -57,7 +57,7 @@ const timelineData = [
     title: "Team Captain &amp; Club President, Santa Clara Swimming",
     place: "Santa Clara, CA",
     category: "athletics",
-    desc: "Named team captain and elected club president for senior year, leading a roster through training blocks, meets, and the balancing act of D1 athletics on top of a full economics course load. Back-to-back Swim MVP (2023-24, 2024-25) and 2024-25 Club Sports Athlete of the Year."
+    desc: "Named team captain and elected club president for senior year, leading a roster through training blocks, meets, and the balancing act of NCAA athletics on top of a full economics course load. Back-to-back Swim MVP (2023-24, 2024-25) and 2024-25 Club Sports Athlete of the Year."
   },
   {
     date: "Jun 2025",
