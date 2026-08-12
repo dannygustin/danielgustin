@@ -86,7 +86,7 @@ const timelineData = [
     title: "Joined NYU Swimming &amp; Diving",
     place: "New York, NY",
     category: "athletics",
-    desc: "Made the NCAA Division I Men's Varsity Swimming roster, training 20+ hours a week on top of a full graduate course load."
+    desc: "Made the NCAA Division III Men's Varsity Swimming roster, training 20+ hours a week on top of a full graduate course load."
   },
   {
     date: "Jan – Mar 2026",
